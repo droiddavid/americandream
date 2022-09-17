@@ -1,18 +1,44 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { UserComponent } from './components/user/user.component';
+import { HomeComponent } from './structure/home/home.component';
+import { HeaderComponent } from './structure/header/header.component';
+import { FooterComponent } from './structure/footer/footer.component';
+import { environment } from 'src/environments/environment.prod';
+import { AuthService } from './auth/auth.service';
+import { DatabaseService } from './services/database/database.service';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardRoutingModule } from './features/dashboard/dashboard-routing.module';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    UserComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DashboardRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AuthModule,
   ],
-  providers: [],
+  providers: [DatabaseService,  AuthService, { provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

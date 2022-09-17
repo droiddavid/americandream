@@ -1,0 +1,28 @@
+.header {
+	height: min-content;
+}
+
+.icon_bs_left {
+	color: white;
+	float: left;
+	margin: .25rem;
+	padding: .25rem;
+	width: min-content;
+}
+.icon_bs_right {
+	color: white;
+	float: right;
+	margin: .25rem;
+	padding: .25rem;
+	width: min-content;
+}
+
+
+
+.brand {
+	text-align: center;
+}
+
+.brand span {
+	color: #fff;
+}

@@ -1,0 +1,14 @@
+button[type="submit"] {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #00833b;
+	border-radius: 25px;	
+}
+
+.circleButton {
+	color: white;
+	height: 60px;
+	max-width: 60px;
+	min-width: 60px;
+	border-radius: 50px;
+}

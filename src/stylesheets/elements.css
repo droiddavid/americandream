@@ -1,0 +1,28 @@
+
+a {
+	border-radius: 20px;
+}
+
+input[type="button"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+select,
+	.mpkButton, 
+	.contact form input, 
+	.contact form textarea {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #00833b;
+	border-radius: 25px;
+}
+
+
+input[type="text"] {
+	border: 2px solid darkgreen;
+}

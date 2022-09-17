@@ -1,0 +1,9 @@
+
+/* Handle the bootstrap toast width and height */
+#toastElement {
+	color: white;
+	height: 3rem;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
